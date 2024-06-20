@@ -7,7 +7,46 @@
     <title>Library</title>
 </head>
 <body>
-    
+    <div class="sidebar">
+        <h1>Add a new book?</h1>
+        <form action="">
+            <label for="bookName">Name of the Book:</label>
+            <input type="text" id="bookName">
+
+            <label for="authorName">Name of the Author:</label>
+            <input type="text" id="authorName">
+
+            <label for="pageNum">Number of Pages:</label>
+            <input type="text" id="pageNum">
+
+            <label for="read"><input type="checkbox" id="read"> Already read this book?</label>
+
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+    <div class="library">
+        <h1>Your Library</h1>
+        <div class="card_container">
+            <div class="card">
+                <h2>Book Name</h2>
+                <p>Author Name</p>
+                <p>Number of pages</p>
+                <p>Status: Read</p>
+            </div>
+            <div class="card">
+                <h2>Book Name</h2>
+                <p>Author Name</p>
+                <p>Number of pages</p>
+                <p>Status: Read</p>
+            </div>
+            <div class="card">
+                <h2>Book Name</h2>
+                <p>Author Name</p>
+                <p>Number of pages</p>
+                <p>Status: Read</p>
+            </div>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
