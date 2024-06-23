@@ -1,8 +1,11 @@
+@import url(https://fonts.bunny.net/css?family=acme:400);
+
 body {
     display: flex;
     padding: 0;
     margin: 0;
     height: 100vh;
+    font-family: 'Acme', sans-serif;
 }
 
 .sidebar {
@@ -17,6 +20,106 @@ body {
 form {
     display: flex;
     flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#bookTitle,
+#authorName,
+#pageNum {
+    width: 15rem;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Acme', sans-serif;
+    border: 1px solid rgb(154, 124, 79);
+    background-color: rgb(218, 207, 207);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#bookTitle:hover,
+#authorName:hover,
+#pageNum:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#bookTitle:focus,
+#authorName:focus,
+#pageNum:focus {
+    border: 1px solid rgb(154, 124, 79);
+    background-color: white;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.read_status {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"]:checked + .checkmark {
+    background-color: #e6c351;
+    border-color: #e6c351;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+.btn_container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Acme', sans-serif;
+    width: 8rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: blanchedalmond;
+    background: linear-gradient(to right, blanchedalmond, bisque);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .library {

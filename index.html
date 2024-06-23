@@ -19,32 +19,20 @@
             <label for="pageNum">Number of Pages:</label>
             <input type="number" id="pageNum">
 
-            <label for="read"><input type="checkbox" id="read"> Already read this book?</label>
+            <label class="read_status" for="read">
+                <input type="checkbox" id="read"><span class="checkmark"></span> Already read this book?
+            </label>
 
-            <button type="submit">Add Book</button>
+            <div class="btn_container">
+                <button type="submit">Add Book</button>
+            </div>
+            
         </form>
     </div>
     <div class="library">
         <h1>Your Library</h1>
         <div class="card_container">
-            <div class="card">
-                <h2>Book Name</h2>
-                <p>Author Name</p>
-                <p>Number of pages</p>
-                <p>Status: Read</p>
-            </div>
-            <div class="card">
-                <h2>Book Name</h2>
-                <p>Author Name</p>
-                <p>Number of pages</p>
-                <p>Status: Read</p>
-            </div>
-            <div class="card">
-                <h2>Book Name</h2>
-                <p>Author Name</p>
-                <p>Number of pages</p>
-                <p>Status: Read</p>
-            </div>
+
         </div>
     </div>
     <script src="scripts.js"></script>
