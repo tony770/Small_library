@@ -104,7 +104,7 @@ input[type="checkbox"]:checked + .checkmark::after {
     text-align: center;
 }
 
-button {
+.submitButton {
     font-family: 'Acme', sans-serif;
     width: 8rem;
     height: 1.8rem;
@@ -117,7 +117,9 @@ button {
     transition: box-shadow 0.3s ease;
 }
 
-button:hover {
+.submitButton:hover,
+.readButton:hover,
+.deleteButton:hover {
     cursor: pointer;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
@@ -147,4 +149,34 @@ button:hover {
     height: 300px;
     border-radius: 20px;
     margin: 10px;
+}
+
+.card h2 {
+    font-size: 30px;
+}
+.card p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.readButton,
+.deleteButton {
+    font-family: 'Acme', sans-serif;
+    width: 8rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.readButton {
+    margin-bottom: 15px;
+    width: 9rem;
+    height: 2rem;
+}
+
+.deleteButton {
+    background-color: red;
 }

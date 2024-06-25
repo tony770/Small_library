@@ -29,7 +29,7 @@ function displayBook() {
     const card_container = document.querySelector('.card_container');
     card_container.innerHTML = '';
 
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
         const newDiv = document.createElement('div');
         newDiv.className = 'card';
         
@@ -45,9 +45,23 @@ function displayBook() {
         newPageNum.innerText = `${book.pageNum}`;
         newDiv.appendChild(newPageNum);
 
-        const newRead = document.createElement('p');
+        const newRead = document.createElement('button');
+        newRead.className = 'readButton';
         newRead.innerText = book.read ? 'Status: Read' : 'Status : Not Read';
+        newRead.addEventListener('click', () => {
+            myLibrary[index].read = !myLibrary[index].read;
+            displayBook();
+        });
         newDiv.appendChild(newRead);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'deleteButton';
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', () => {
+            myLibrary.splice(index, 1);
+            displayBook();
+        });
+        newDiv.appendChild(deleteButton);
 
         card_container.appendChild(newDiv);
     });
